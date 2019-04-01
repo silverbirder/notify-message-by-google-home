@@ -10,7 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "google-home-notifier": "^1.2.0",
-    "google-tts-api": "0.0.4",
     "node-gyp": "^3.8.0"
   },
   "repository": {
