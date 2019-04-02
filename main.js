@@ -1,7 +1,7 @@
 const googlehome = require('google-home-notifier');
-const message = "hello";
+const message = process.env.MESSAGE;
 
 googlehome.device('Google Home', 'ja');
-googlehome.ip('192.168.3.17'); // (例:192.168.1.20)
+googlehome.ip(process.env.IP_ADDRESS); // (例:192.168.1.20)
 googlehome.accent('ja');
 googlehome.notify(message, res => console.log(res));
