@@ -6,6 +6,12 @@ $ docker run -e MESSAGE="hello world" -e IP_ADDRESS="192.168.3.17" silverbirder/
 
 ## example
 ・Notify me to go to bed at 24 o'clock with crontab.
+```
+$ crontab -l
+50 23 * * * /usr/local/bin/docker run -e MESSAGE="そろそろ寝る時間ですよ" -e IP_ADDRESS="192.168.3.17" silverbirder/simple-google-home-notifier:1.0.0 &>/dev/null
+
+*/5 0 * * * /usr/local/bin/docker run -e MESSAGE="早く寝なさい" -e IP_ADDRESS="192.168.3.17" silverbirder/simple-google-home-notifier:1.0.0 &>/dev/null
+```
 
 ## Note
 ・Google-Home and Machine (Raspberry Pi, Mac) are the same network.  
